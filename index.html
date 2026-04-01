@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -44,22 +44,22 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hexagon">
-                    <defs>
-                        <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#2563eb" />
-                            <stop offset="100%" stop-color="#8b5cf6" />
-                        </linearGradient>
-                    </defs>
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                </svg>
+                <div class="logo-icon-bg">
+                    <div class="logo-inner-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
+                           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                </div>
                 <span>Neotronics</span>
             </a>
             <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
+                <a href="#" class="nav-link">Home</a>
+                <a href="#about" class="nav-link active" style="color: var(--primary);">About</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#why-us" class="nav-link">Why Us</a>
-                <a href="#contact" class="btn btn-primary sm-hidden">Contact Us</a>
+                <a href="#blogs" class="nav-link">Blogs</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#contact" class="btn btn-primary sm-hidden btn-pill" style="border: 1px solid rgba(255,255,255,0.1); background: transparent;">Get In Touch</a>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
@@ -72,46 +72,7 @@
 
     <!-- Hero Section -->
     <header class="hero illuminated-hero">
-        <!-- Glow SVG Filter customized for Neotronics Palette -->
-        <svg class="glow-svg" width="0" height="0" style="position:absolute; width:0; height:0; z-index:-1;" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <filter id="glow-4" color-interpolation-filters="sRGB" x="-50%" y="-200%" width="200%" height="500%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur4"/>
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="19" result="blur19"/>
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur9"/>
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur30"/>
-                    
-                    <feColorMatrix in="blur4" result="color-0-blur" type="matrix" values="1 0 0 0 0  0 0.98 0 0 0  0 0 0.96 0 0  0 0 0 0.8 0" />
-                    <feOffset in="color-0-blur" result="layer-0-offsetted" dx="0" dy="0" />
-                    <feColorMatrix in="blur19" result="color-1-blur" type="matrix" values="0.02 0 0 0 0  0 0.71 0 0 0  0 0 0.83 0 0  0 0 0 1 0" />
-                    <feOffset in="color-1-blur" result="layer-1-offsetted" dx="0" dy="2" />
-                    <feColorMatrix in="blur9" result="color-2-blur" type="matrix" values="0.14 0 0 0 0  0 0.38 0 0 0  0 0 0.92 0 0  0 0 0 0.65 0" />
-                    <feOffset in="color-2-blur" result="layer-2-offsetted" dx="0" dy="2" />
-                    <feColorMatrix in="blur30" result="color-3-blur" type="matrix" values="0.54 0 0 0 0  0 0.36 0 0 0  0 0 0.96 0 0  0 0 0 1 0" />
-                    <feOffset in="color-3-blur" result="layer-3-offsetted" dx="0" dy="2" />
-                    <feColorMatrix in="blur30" result="color-4-blur" type="matrix" values="0.11 0 0 0 0  0 0.25 0 0 0  0 0 0.68 0 0  0 0 0 1 0" />
-                    <feOffset in="color-4-blur" result="layer-4-offsetted" dx="0" dy="16" />
-                    <feColorMatrix in="blur30" result="color-5-blur" type="matrix" values="0.42 0 0 0 0  0 0.15 0 0 0  0 0 0.85 0 0  0 0 0 0.8 0" />
-                    <feOffset in="color-5-blur" result="layer-5-offsetted" dx="0" dy="24" />
-                    <feColorMatrix in="blur30" result="color-6-blur" type="matrix" values="0.19 0 0 0 0  0 0.18 0 0 0  0 0 0.50 0 0  0 0 0 0.8 0" />
-                    <feOffset in="color-6-blur" result="layer-6-offsetted" dx="0" dy="32" />
-                    <feColorMatrix in="blur30" result="color-7-blur" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.15 0" />
-                    <feOffset in="color-7-blur" result="layer-7-offsetted" dx="0" dy="32" />
-                    <feMerge>
-                        <feMergeNode in="layer-0-offsetted" />
-                        <feMergeNode in="layer-1-offsetted" />
-                        <feMergeNode in="layer-2-offsetted" />
-                        <feMergeNode in="layer-3-offsetted" />
-                        <feMergeNode in="layer-4-offsetted" />
-                        <feMergeNode in="layer-5-offsetted" />
-                        <feMergeNode in="layer-6-offsetted" />
-                        <feMergeNode in="layer-7-offsetted" />
-                        <feMergeNode in="layer-0-offsetted" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-            </defs>
-        </svg>
+        <!-- Text Glow handled purely in CSS -->
 
         <div class="hero-bg"></div>
         <div class="hero-glow-bg">
@@ -120,12 +81,12 @@
         </div>
 
         <div class="container hero-content">
-            <div class="badge reveal-up">Innovation & Automation</div>
-            <h1 class="reveal-up delay-1">AI-Driven IT Solutions <br><span class="glow-text text-gradient" data-text="for Modern Businesses">for Modern Businesses</span></h1>
-            <p class="reveal-up delay-2">We build intelligent systems that automate workflows and drive efficiency. Transform your operations with enterprise-scale software and AI solutions.</p>
-            <div class="hero-actions reveal-up delay-3">
-                <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
-                <a href="#services" class="btn btn-secondary btn-lg">View Services</a>
+            <div class="badge reveal-up badge-pill">
+                <span style="font-weight: 700;">2025</span> &nbsp;&nbsp;|&nbsp;&nbsp; Explore Our Journey
+            </div>
+            <h1 class="reveal-up delay-1" style="font-weight: 400;">with Revolution! <br><span class="glow-text" style="font-weight: 600;">Pioneering AI Innovation</span></h1>
+            <p class="reveal-up delay-2" style="max-width: 500px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Neotronics is your trusted agency for creative strategy. We specialize in cutting-edge digital business solutions.</p>
+            <div class="hero-actions reveal-up delay-3" style="display: none;">
             </div>
         </div>
     </header>
@@ -354,9 +315,13 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <a href="#" class="logo footer-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hexagon">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                    </svg>
+                    <div class="logo-icon-bg" style="width: 28px; height: 28px; border-radius: 6px;">
+                        <div class="logo-inner-circle" style="width: 20px; height: 20px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
+                               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                    </div>
                     Neotronics
                 </a>
                 <p>AI-Driven IT Solutions for Modern Businesses.</p>
@@ -388,6 +353,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919446002663" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
 
     <script src="script.js"></script>
 </body>
